@@ -1,0 +1,232 @@
+<form action="" method="post" enctype="multipart/form-data">
+
+    <div class="form-container">
+
+
+
+        <div class="form-sub-head"> Send Enquiry </div>
+
+
+
+        <fieldset>
+            <legend> Student Information </legend>
+            <ul class="fields">
+                <li class="col4">
+                    <span class="lable">Student Name <font color="red">*</font> </span>
+                    <input name="student_name" id="student_name" value="" type="text" placeholder="Student Name"
+                        required="">
+                </li>
+                <li class="col4">
+                    <span class="lable">Email <font color="red">*</font> </span>
+                    <input name="email" id="email" value="" type="text" placeholder="Student email" required="">
+                </li>
+
+                <li class="col4">
+                    <span class="lable">Mobile <font color="red">*</font> </span>
+                    <input name="mobile" id="mobile" value="" type="text" placeholder="Student Mobile" required="">
+                </li>
+                <li class="col4"><span class="lable">Country of Interest</span>
+                    <select name="country" id="country" onchange="search_inst()">
+                        <option value="">Select Country</option>
+                        <option value="14">Australia</option>
+                        <option value="40">Canada</option>
+                        <option value="157">New Zealand</option>
+                        <option value="235">United Kingdom</option>
+                    </select>
+                </li>
+                <li class="col4" id="representing_institute_divid">
+                    <span class="lable">Interested Institution <span id="inst_notice"></span></span>
+                    <span id="inst_list_id">
+
+                        <select name="representing_institute" id="representing_institute" onchange="check_other();"
+                            required="">
+
+
+                            <option value="">Select Institute</option>
+                            <option value="other">Other</option>
+                        </select> </span>
+                </li>
+
+                <li id="other_inst_li_id" style="display:none;" class="col4">
+                    <span class="lable">Institute Name</span>
+                    <input name="other_inst" id="other_inst" value="" type="text"
+                        placeholder="Please enter institute Name" required1="">
+                </li>
+
+                <li class="col4"><span class="lable"> Branch Office <span class="small">(Select the Branch Office to
+                            whom you wish to contact)</span>
+                        <font color="red">*</font>
+                    </span><select name="branch" id="branch" required="">
+
+
+                        <option value="">Select Branch</option>
+                        <option value="kg+7xyusJbfOsuXR+bUD/+QNPVIGD1mn0ROtUBs/W+Y=">Butwal</option>
+                        <option value="WrDdbGkdDKM2S8I906Ei/5WzdQ7gOeNT6F8QI84Z/bk=">Chitwan</option>
+                        <option value="uEvBxmDuonislUwD5/MHtgaLyfSpe+HP20OhpqaBSCY=">Dharan</option>
+                        <option value="DNor8M38Siox+N2Fm29pGVJIwmJydjLg1ULsloyhffA=">Head Office</option>
+                        <option value="FAPngcpeyaxwkYRBcFzTusjUnEJZ5tdS/jWu+Mnd96k=">Kawasoti</option>
+                        <option value="ZdyWTpkcvfaa8rxO+LLgwG0ctgGSCs31F6lserLiLss=">Parsa</option>
+                        <option value="eG6fhzr8ZLiGNgZuAwvlY73vR0SkOUCxFr9qncx7bYw=">Pokhara</option>
+                        <option value="yETh5AAdItGlkihtpi/6ACaPSj7maPCBdXru8L/6FNw=">Sydney</option>
+                    </select></li>
+                <li class="col4"><span class="lable">Phone</span>
+                    <input name="phone" id="phone" value="" type="text" placeholder="Student Phone" required1="">
+                </li>
+
+                <li class="col4">
+                    <span class="lable">Alternate No.</span>
+                    <input name="alt_phone" id="alt_phone" value="" type="text" placeholder="Alternate phone Number"
+                        required1="">
+                </li>
+                <li class="col4"><span class="lable">Skype ID</span>
+                    <input name="skype" id="skype" value="" type="text" placeholder="Student Skype" required1="">
+                </li>
+
+                <li class="col4"><span class="lable">Estimated Budget (with Currency) </span>
+                    <input type="text" name="budget" id="budget" value="" placeholder="Budget">
+                </li>
+                <li class="col4"><span class="lable">Course Level Of interest</span>
+                    <select name="course_level" id="course_level">
+                        <option value="">Select Course Level</option>
+                        <option value="10">Advanced Diploma</option>
+                        <option value="9">Applied Degrees</option>
+                        <option value="3">Bachelors/UG</option>
+                        <option value="1">Certificate</option>
+                        <option value="11">Coaching/Preparing Courses</option>
+                        <option value="2">Diploma</option>
+                        <option value="7">Foundation</option>
+                        <option value="4">Masters/PG</option>
+                        <option value="5">Phd/Doctorate</option>
+                        <option value="6">Post Doctorate</option>
+                        <option value="8">Summer School</option>
+                        <option value="others">Others</option>
+                    </select>
+                </li>
+                <li style="border:1px solid #e8e8e8;margin:5px 0px 5px 3px;padding:5px;box-sizing:border-box;border-radius:5px;"
+                    class="full">
+                    <span class="lable">Field of Interest (can select multiple options)</span>
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="1"> Architecture, Building and Planning</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="2"> Art and Design</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="3"> Business and Management</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="4"> Commerce</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="5"> Computer Science and IT</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="6"> Culinary Arts</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="7"> Education and Training</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="8"> Engineering</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="9"> Hair, Beauty and Personal Care</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="10"> Health Sciences</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="11"> Healthcare and Medicine</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="12"> Humanities</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="13"> Information Science and Mathematics</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="14"> Land and Environment</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="15"> Language Programmes</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="16"> Law</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="17"> Media/Journalism/Communication</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="18"> Military Studies</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="19"> Music, Dance and Performing Arts</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="20"> Nursing</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="21"> Science and Mathematics</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="22"> Social Studies and Communication</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="23"> Sports</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="24"> Travel, Tourism and Hospitality</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="25"> Vocational Courses</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="26"> Accounting and Marketing</div>
+
+                    <div class="col3" style="padding:5px 0;font-size:13px;display:inline-block;"><input type="checkbox"
+                            name="field_of_Interest[]" value="27"> Agriculture</div>
+
+                </li>
+
+                <li class="full"><span class="lable">Enquiry / Additional Information</span><textarea name="enquiry_msg"
+                        placeholder="Enquiry or Additional Information"></textarea></li>
+
+
+            </ul>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend> Additional Information </legend>
+            <ul class="fields">
+
+                <li><span class="lable">Marital Status </span></li>
+                <li><input name="info_1" id="info_1" value="" type="text" placeholder="Please enter Additional Info"
+                        required1=""></li>
+
+                <li><span class="lable">Test Score (IELTS / TOFEL / GRE )</span></li>
+                <li><input name="info_2" id="info_2" value="" type="text" placeholder="Please enter Additional Info"
+                        required1=""></li>
+                <li><span class="lable">Address </span></li>
+                <li><input name="info_3" id="info_3" value="" type="text" placeholder="Please enter Additional Info"
+                        required1=""></li>
+                <li><span class="lable">+2 Score </span></li>
+                <li><input name="info_4" id="info_4" value="" type="text" placeholder="Please enter Additional Info"
+                        required1=""></li>
+                <li><span class="lable">Bachelors Score ( % or CGPA ) </span></li>
+                <li><input name="info_5" id="info_5" value="" type="text" placeholder="Please enter Additional Info"
+                        required1=""></li>
+
+
+            </ul>
+
+        </fieldset>
+
+
+
+        <!-- <button name="submit"><i class="fa fa-plus"></i> Update </button> -->
+        <center><button name="submit">SUBMIT</button></center>
+    </div>
+
+</form>
